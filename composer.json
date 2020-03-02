@@ -1,0 +1,29 @@
+{
+    "name": "dogteam/sendinblue",
+    "description": "Laravel et SendInblue sous Laravel = 5.6.* et php => 7",
+    "type":"library",
+    "homepage" : "https://github.com/DogTeams/sendinblue",
+    "authors": [
+        {
+            "name": "Schneerberger",
+            "email": "w.schneerberger@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "Dogteam\\Sendinblue\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "sendinblue/api-v3-sdk": "^6.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dogteam\\SenInblue\\SendinBlueServiceProvider"
+            ]
+        }
+    }
+}
