@@ -118,7 +118,7 @@ class SMTP
             break;
         }
     }  
-    public function getAggreted(
+    public function getAggregated(
         $type,
         $startDate = null, 
         $endDate = null, 
@@ -126,10 +126,10 @@ class SMTP
         $tag = null
         ){
         switch($type){
-            case 'AggregatedSmtpReport':
+            case 'AggregatedReport':
                 return $this->Api->getAggregatedSmtpReport($startDate, $endDate, $days, $tag);
             break;
-            case 'AggregatedSmtpReportAsync':
+            case 'AggregatedReportAsync':
                 return $this->Api->getAggregatedSmtpReportAsync($startDate, $endDate, $days, $tag);
             break;
         }
@@ -152,7 +152,7 @@ class SMTP
                 return $this->Api->getSmtpTemplates($templateStatus, $limit, $offset);
             break;
             case 'TemplatesAsync':
-                return $this->Api->getSmtpTemplateAsync($templateStatus, $limit, $offset);
+                return $this->Api->getSmtpTemplatesAsync($templateStatus, $limit, $offset);
             break;
 
         }
