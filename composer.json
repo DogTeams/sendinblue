@@ -16,7 +16,6 @@
             "Dogteam\\Sendinblue\\": "src"
         }
     },
-    "minimum-stability": "dev",
     "require": {
         "guzzlehttp/guzzle": "^6.3",
         "sendinblue/api-v3-sdk": "^6.1"
