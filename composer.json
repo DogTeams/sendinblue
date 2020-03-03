@@ -2,6 +2,7 @@
     "name": "dogteam/sendinblue",
     "description": "Laravel et SendInblue sous Laravel = 5.6.* et php => 7",
     "type":"library",
+    "license": "MIT",
     "homepage" : "https://github.com/DogTeams/sendinblue",
     "authors": [
         {
