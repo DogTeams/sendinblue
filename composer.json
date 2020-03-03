@@ -23,7 +23,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dogteam\\SenInblue\\Providers\\SendinBlueServiceProvider"
+                "Dogteam\\Sendinblue\\Providers\\SendinBlueServiceProvider"
             ]
         }
     }
