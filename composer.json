@@ -19,5 +19,12 @@
     "require": {
         "guzzlehttp/guzzle": "^6.3",
         "sendinblue/api-v3-sdk": "^6.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dogteam\\SenInblue\\Providers\\SendinBlueServiceProvider"
+            ]
+        }
     }
 }
