@@ -40,19 +40,19 @@ class SMTP
             break;
         }
     }
-    public function delete($type, $templateId = null, $deleteHardbounces = null){ //templateId non utile pour deleteHardbounces & deleteHardbouncesAsync
+    public function delete($type, $option = []){ //templateId non utile pour deleteHardbounces & deleteHardbouncesAsync
         switch($type){                                                            /*deleteHardbounces(optional)*/
             case 'Template':
-                $this->Api->deleteSmtpTemplate($templateId);
+                $this->Api->deleteSmtpTemplate($option['id']);
             break;
             case 'TemplateAsync':
-                $this->Api->deleteSmtpTemplateAsync($templateId);
+                $this->Api->deleteSmtpTemplateAsync($option['id']);
             break;
-            case 'deleteHardbounces':
-                $this->Api->deleteSmtpHardbounces($deleteHardbounces);
+            case 'Hardbounces':
+                $this->Api->deleteHardbounces($option['Hardbounces']);
             break;
-            case 'deleteHardbouncesAsync':
-                $this->Api->deleteSmtpHardbouncesAsync($deleteHardbounces);
+            case 'HardbouncesAsync':
+                $this->Api->deleteHardbouncesAsync($option['Hardbounces']);
             break;
         }
     }
@@ -92,10 +92,10 @@ class SMTP
         $templateId = null
         ){
         switch($type){
-            case 'EmailEventReport':
+            case 'Report':
                 return $this->Api->getEmailEventReport($limit, $offset, $startDate, $endDate, $days, $email, $event, $tags, $messageId, $templateId);
             break;
-            case 'EmailEventReportAsync':
+            case 'ReportAsync':
                 return $this->Api->getEmailEventReportAsync($limit, $offset, $startDate, $endDate, $days, $email, $event, $tags, $messageId, $templateId);
             break;
         }
@@ -126,10 +126,10 @@ class SMTP
         $tag = null
         ){
         switch($type){
-            case 'AggregatedReport':
+            case 'Report':
                 return $this->Api->getAggregatedSmtpReport($startDate, $endDate, $days, $tag);
             break;
-            case 'AggregatedReportAsync':
+            case 'ReportAsync':
                 return $this->Api->getAggregatedSmtpReportAsync($startDate, $endDate, $days, $tag);
             break;
         }
